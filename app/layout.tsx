@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 import "./globals.css";
 
 const baiJamjuree = Bai_Jamjuree({
@@ -18,7 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={baiJamjuree.className}>{children}</body>
+      <body
+        className={cn(baiJamjuree.className, "bg-light text-dark antialiased")}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

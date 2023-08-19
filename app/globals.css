@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* COMMON STYLES */
+.wrapper {
+  @apply container mx-auto px-5 md:px-0;
+}
+
+.eq {
+  transition: 300ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* LINK STYLES */
+.link-item {
+  @apply relative text-sm;
+}
+
+.link-item::after {
+  @apply content-[""] absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-px bg-dark origin-center eq;
+}
+
+.link-item:hover::after {
+  @apply w-full;
+}
