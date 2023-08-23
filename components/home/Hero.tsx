@@ -1,13 +1,14 @@
 import { Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 
 const Hero = () => {
   return (
     <section className='wrapper section-padding h-[calc(100vh-4rem)]'>
-      <div className='w-full h-full grid grid-rows-4 gap-5 items-center'>
+      <div className='w-full h-full grid grid-rows-4 gap-5 items-center relative'>
         {/* FIRST ROW */}
         <div className='w-full h-full grid grid-cols-[30%_auto] gap-10 2xl:gap-20 border-b pb-5 border-b-gray'>
           <div className='w-full h-full overflow-hidden rounded-[0px_50px_0px_50px]'>
@@ -106,6 +107,20 @@ const Hero = () => {
             </h2>
           </div>
         </div>
+
+        {/* PACKAGES BUTTON */}
+        <Link
+          href='/#packages'
+          className='text-xs 2xl:text-lg bg-dark text-light w-20 h-20 2xl:w-40 2xl:h-40 rounded-full overflow-hidden flex justify-center items-center uppercase absolute left-[35%] bottom-[12%] 2xl:left-[33%] 2xl:-bottom-[5%] z-[1] group shadow-2xl shadow-dark/50 hover:shadow-violet/50 eq'
+        >
+          <p className='z-[3]'>Packages</p>
+
+          {/* FILLER 1 */}
+          <span className='z-[2] absolute top-full left-0 right-0 bottom-0 w-full h-1/2 bg-violet group-hover:top-1/2 eq'></span>
+
+          {/* FILLER 2 */}
+          <span className='z-[2] absolute -top-full left-0 right-0 bottom-0 w-full h-1/2 bg-violet group-hover:top-0 eq'></span>
+        </Link>
       </div>
     </section>
   );

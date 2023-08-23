@@ -3,14 +3,14 @@ import { buttonVariance } from "../ui/Button";
 
 const Navbar = () => {
   return (
-    <header className='h-16 border-b border-gray flex items-center bg-white'>
+    <header className='h-16 border-b border-gray flex items-center bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-[100]'>
       <div className='wrapper grid grid-cols-3 items-center'>
         {/* LEFT NAV */}
         <nav>
           <ul className='flex gap-5'>
             <li>
-              <Link href='/' className='link-item'>
-                Link 1
+              <Link href='/#packages' className='link-item'>
+                Packages
               </Link>
             </li>
             <li>
