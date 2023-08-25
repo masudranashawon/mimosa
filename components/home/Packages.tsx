@@ -1,5 +1,5 @@
-import React from "react";
-import SectionTitle from "../shared/SectionTitle";
+import React from 'react';
+import SectionTitle from '../shared/SectionTitle';
 
 const Packages = () => {
   return (

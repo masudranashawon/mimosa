@@ -1,5 +1,5 @@
-import Hero from "@/components/home/Hero";
-import Packages from "@/components/home/Packages";
+import Hero from '@/components/home/Hero';
+import Packages from '@/components/home/Packages';
 
 const HomePage = () => {
   return (
