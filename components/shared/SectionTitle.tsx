@@ -12,7 +12,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   color = 'bg-red',
 }) => {
   return (
-    <div className='flex items-center gap-2.5'>
+    <div className='mb-10 flex items-center gap-2.5 2xl:mb-20'>
       <span className={cn('h-16 w-2 2xl:h-20 2xl:w-3', color)}></span>
       <div className='flex flex-col items-start gap-2.5 '>
         <span className='text-xs font-semibold uppercase tracking-[0.375em] 2xl:text-lg'>
