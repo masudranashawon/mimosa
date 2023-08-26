@@ -1,5 +1,11 @@
+import AllPackages from '@/components/packages/AllPackages';
+
 const PackagesPage = () => {
-  return <main>PackagesPage</main>;
+  return (
+    <main>
+      <AllPackages />
+    </main>
+  );
 };
 
 export default PackagesPage;

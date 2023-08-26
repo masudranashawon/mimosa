@@ -1,14 +1,11 @@
-import { data } from '@/data/packages';
-import { cn } from '@/lib/utils';
-import { buttonVariance } from '../ui/Button';
+import { data } from '../../data/packages';
 import SectionTitle from '../shared/SectionTitle';
 import HorizontalTab from '../ui/HorizontalTab';
-import PackageItem from './PackageItem';
-import Link from 'next/link';
+import PackageItem from '../home/PackageItem';
 
-const Packages = () => {
+const AllPackages = () => {
   return (
-    <section className='wrapper section-padding' id='packages'>
+    <section className='wrapper section-padding min-h-screen'>
       <SectionTitle title='Explore our beauty packages' subTitle='Packages' />
 
       {/* PACKAGES */}
@@ -18,7 +15,6 @@ const Packages = () => {
           {data
             .filter((item: any) => item.masterCategory === 'Wellness')
             .sort((a: any, b: any) => a.price - b.price)
-            .slice(0, 4)
             .map((item: any) => (
               <PackageItem key={item.id} {...item} />
             ))}
@@ -29,7 +25,6 @@ const Packages = () => {
           {data
             .filter((item: any) => item.masterCategory === 'Beauty')
             .sort((a: any, b: any) => a.price - b.price)
-            .slice(0, 4)
             .map((item: any) => (
               <PackageItem key={item.id} {...item} />
             ))}
@@ -40,25 +35,13 @@ const Packages = () => {
           {data
             .filter((item: any) => item.masterCategory === 'Events')
             .sort((a: any, b: any) => a.price - b.price)
-            .slice(0, 4)
             .map((item: any) => (
               <PackageItem key={item.id} {...item} />
             ))}
         </div>
       </HorizontalTab>
-      <div className='flex justify-center'>
-        <Link
-          href='/packages'
-          className={cn(
-            buttonVariance({ variant: 'outline' }),
-            'mt-10 2xl:mt-20'
-          )}
-        >
-          View All packages
-        </Link>
-      </div>
     </section>
   );
 };
 
-export default Packages;
+export default AllPackages;
