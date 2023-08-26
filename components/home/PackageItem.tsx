@@ -25,12 +25,12 @@ const PackageItem: React.FC<PackageItemProps> = ({
       {/* PACKAGE CARD IMAGE */}
       <Link
         href={`/packages/${id}`}
-        className='group h-[12rem] w-full overflow-hidden rounded-xl border border-gray'
+        className='border-grey group h-[12rem] w-full overflow-hidden rounded-xl border 2xl:h-[15rem]'
       >
         <Image
           src={image}
           alt={title}
-          height={640}
+          height={360}
           width={640}
           priority
           className='eq h-full w-full object-cover brightness-90 group-hover:scale-125 group-hover:brightness-100'

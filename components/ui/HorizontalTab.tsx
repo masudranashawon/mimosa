@@ -45,7 +45,7 @@ const HorizontalTab: React.FC<HorizontalTabProps> = ({
         ))}
       </div>
 
-      {/* TAB CONTENT */}
+      {/* TAB CONTENTS */}
       <div>
         {React.Children.toArray(children)?.map(
           (item: React.ReactNode, index: number) => (

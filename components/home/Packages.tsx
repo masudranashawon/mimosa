@@ -1,5 +1,4 @@
 import { data } from '@/data/packages';
-import React from 'react';
 import SectionTitle from '../shared/SectionTitle';
 import HorizontalTab from '../ui/HorizontalTab';
 import PackageItem from './PackageItem';
@@ -9,29 +8,30 @@ const Packages = () => {
     <section className='wrapper section-padding' id='packages'>
       <SectionTitle title='Explore our beauty packages' subTitle='Packages' />
 
-      <HorizontalTab tabs={['Skincare', 'Haircare', 'Makeup Artistry']}>
-        {/* SKINCARE */}
+      {/* PACKAGES */}
+      <HorizontalTab tabs={['Wellness', 'Beauty', 'Events']}>
+        {/* Wellness */}
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {data
-            .filter((item: any) => item.masterCategory === 'Skincare')
+            .filter((item: any) => item.masterCategory === 'Wellness')
             .map((item: any) => (
               <PackageItem key={item.id} {...item} />
             ))}
         </div>
 
-        {/* HAIRCARE */}
+        {/* Beauty */}
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {data
-            .filter((item: any) => item.masterCategory === 'Haircare')
+            .filter((item: any) => item.masterCategory === 'Beauty')
             .map((item: any) => (
               <PackageItem key={item.id} {...item} />
             ))}
         </div>
 
-        {/* MAKEUP ARTISTRY */}
+        {/* Events */}
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {data
-            .filter((item: any) => item.masterCategory === 'Makeup Artistry')
+            .filter((item: any) => item.masterCategory === 'Events')
             .map((item: any) => (
               <PackageItem key={item.id} {...item} />
             ))}
