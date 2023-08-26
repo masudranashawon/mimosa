@@ -1,7 +1,7 @@
 import { data } from '@/data/packages';
 import React from 'react';
 import SectionTitle from '../shared/SectionTitle';
-import HorizontalTab from '../shared/HorizontalTab';
+import HorizontalTab from '../ui/HorizontalTab';
 import PackageItem from './PackageItem';
 
 const Packages = () => {

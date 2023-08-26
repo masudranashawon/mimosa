@@ -12,12 +12,12 @@ main {
   @apply container mx-auto px-5 md:px-0;
 }
 
-.eq {
-  transition: 300ms cubic-bezier(0.25, 1, 0.5, 1);
-}
-
 .section-padding {
   @apply py-10 2xl:py-20;
+}
+
+.eq {
+  transition: 300ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* LINK STYLES */

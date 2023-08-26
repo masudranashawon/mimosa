@@ -12,6 +12,7 @@ const baiJamjuree = Bai_Jamjuree({
 
 export const metadata: Metadata = {
   title: 'Mimosa | Home',
+  description: 'A beauty salon and spa website.',
 };
 
 export default function RootLayout({
