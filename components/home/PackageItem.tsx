@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface PackageItemProps {
-  id: string;
+  id: number;
   title: string;
   image: string;
   category: string;
