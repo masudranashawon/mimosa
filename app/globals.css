@@ -21,6 +21,10 @@ html {
   @apply py-10 2xl:py-20;
 }
 
+.section-padding-2 {
+  @apply py-20 2xl:py-40;
+}
+
 .eq {
   transition: 300ms cubic-bezier(0.25, 1, 0.5, 1);
 }

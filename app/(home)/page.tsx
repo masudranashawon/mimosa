@@ -1,4 +1,5 @@
 import Community from '@/components/home/Community';
+import CommunityGathered from '@/components/home/CommunityGathered';
 import Hero from '@/components/home/Hero';
 import Packages from '@/components/packages/Packages';
 import Footer from '@/components/shared/footer/Footer';
@@ -11,6 +12,7 @@ const HomePage = () => {
       <main>
         <Hero />
         <Packages />
+        <CommunityGathered />
         <Community />
       </main>
       <Footer />
