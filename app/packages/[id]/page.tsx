@@ -1,6 +1,8 @@
 import { data } from '@/data/packages';
 import { packageItem } from '@/types/packageItem';
 import PackageDetailsSection from '@/components/packages-details/PackageDetailsSection';
+import Navbar from '@/components/shared/navbar/Navbar';
+import FooterMini from '@/components/shared/footer/FooterMini';
 
 const PackageDetailsPage = ({ params }: { params: { id: string } }) => {
   const id = Number(params.id);
@@ -12,9 +14,13 @@ const PackageDetailsPage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <main>
-      <PackageDetailsSection packageItem={packageItem} />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <PackageDetailsSection packageItem={packageItem} />
+      </main>
+      <FooterMini />
+    </>
   );
 };
 

@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 /* BASE STYLES */
-main {
-  @apply mt-16;
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
+
+/* main {
+  @apply mt-16;
+} */
 
 /* COMMON STYLES */
 .wrapper {

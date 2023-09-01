@@ -1,35 +1,24 @@
+import { packageItem } from '@/types/packageItem';
 import { buttonVariance } from '../ui/Button';
 import { formatCurrency } from '@/utils/formatCurrency';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface PackageItemProps {
-  id: number;
-  title: string;
-  image: string;
-  category: string;
-  description: string;
-  price: number;
+  packageItem: packageItem;
 }
 
-const PackageItem: React.FC<PackageItemProps> = ({
-  id,
-  title,
-  image,
-  category,
-  description,
-  price,
-}) => {
+const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
   return (
     <div className='flex w-full flex-col gap-5'>
       {/* PACKAGE CARD IMAGE */}
       <Link
-        href={`/packages/${id}`}
+        href={`/packages/${packageItem.id}`}
         className='border-grey group h-[12rem] w-full overflow-hidden rounded-xl border 2xl:h-[15rem]'
       >
         <Image
-          src={image}
-          alt={title}
+          src={packageItem.image}
+          alt={packageItem.title}
           height={360}
           width={640}
           priority
@@ -40,15 +29,17 @@ const PackageItem: React.FC<PackageItemProps> = ({
       {/* PACKAGE CARD CONTENT */}
       <div className='eq flex w-full flex-col gap-2.5 rounded-xl border-gray bg-gray/25 p-5 hover:bg-gray/50'>
         <span className='text-xs font-bold uppercase tracking-[0.375em] text-green'>
-          {category}
+          {packageItem.category}
         </span>
-        <h4 className='text-xl 2xl:text-2xl'>{title}</h4>
+        <h4 className='text-xl 2xl:text-2xl'>{packageItem.title}</h4>
         <hr />
-        <p className='text-dark/75'>{description}</p>
+        <p className='text-dark/75'>{packageItem.description}</p>
         <div className='flex items-center justify-between gap-2.5'>
-          <p className='text-xl 2xl:text-2xl'>{formatCurrency(price)}</p>
+          <p className='text-xl 2xl:text-2xl'>
+            {formatCurrency(packageItem.price)}
+          </p>
           <Link
-            href={`/packages/${id}`}
+            href={`/packages/${packageItem.id}`}
             className={buttonVariance({ variant: 'royalty' })}
           >
             View Details
