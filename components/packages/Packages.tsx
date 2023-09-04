@@ -83,15 +83,12 @@ const Packages: React.FC<PackagesProps> = ({ fromPackagePage }) => {
       </HorizontalTab>
 
       {!fromPackagePage && (
-        <div className='flex justify-center'>
+        <div className='mt-10 flex justify-center 2xl:mt-20'>
           <Link
             href='/packages'
-            className={cn(
-              buttonVariance({ variant: 'outline' }),
-              'mt-10 2xl:mt-20'
-            )}
+            className={cn(buttonVariance({ variant: 'outline' }))}
           >
-            View All packages
+            View all packages
           </Link>
         </div>
       )}

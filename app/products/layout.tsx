@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mimosa | Sign up',
+  title: 'Mimosa | Products',
 };
 
-export default function SignUpLayout({
+export default function ProductsPageLayout({
   children,
 }: {
   children: React.ReactNode;

@@ -8,7 +8,7 @@ const Community = () => {
         {/* MAIN BOX */}
         <div className='relative h-[300px] w-[300px] bg-gray 2xl:h-[500px] 2xl:w-[500px]'>
           {/* LEFT BOX */}
-          <div className='absolute -left-[25%] -top-[15%] z-[2] h-[260px] w-[150px] overflow-hidden rounded-tl-[100px] bg-purple-400 2xl:h-[400px] 2xl:w-[300px]'>
+          <div className='absolute -left-[25%] -top-[15%] z-[2] h-[260px] w-[150px] overflow-hidden rounded-tl-[100px] 2xl:h-[400px] 2xl:w-[300px]'>
             <Image
               src='https://images.pexels.com/photos/18022068/pexels-photo-18022068/free-photo-of-reflection-of-a-young-woman-in-the-mirror.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt='Reflection of a Young Woman in the Mirror'
@@ -20,7 +20,7 @@ const Community = () => {
           </div>
 
           {/* MID BOX */}
-          <div className='absolute left-1/2 top-1/2 z-[3] h-[250px] w-[200px] -translate-x-1/2 -translate-y-1/2 bg-purple-300 2xl:h-[400px] 2xl:w-[300px]'>
+          <div className='absolute left-1/2 top-1/2 z-[3] h-[250px] w-[200px] -translate-x-1/2 -translate-y-1/2 2xl:h-[400px] 2xl:w-[300px]'>
             <Image
               src='https://images.pexels.com/photos/17127836/pexels-photo-17127836/free-photo-of-evening-photo-of-a-young-woman-sitting-in-a-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt='Evening Photo of a Young Woman Sitting in a Field'
@@ -32,7 +32,7 @@ const Community = () => {
           </div>
 
           {/* RIGHT BOX */}
-          <div className='absolute -bottom-[15%] -right-[25%] z-[2] h-[260px] w-[150px] overflow-hidden rounded-br-[100px] bg-purple-400 2xl:h-[400px] 2xl:w-[300px]'>
+          <div className='absolute -bottom-[15%] -right-[25%] z-[2] h-[260px] w-[150px] overflow-hidden rounded-br-[100px] 2xl:h-[400px] 2xl:w-[300px]'>
             <Image
               src='https://images.pexels.com/photos/18076463/pexels-photo-18076463/free-photo-of-young-smiling-woman-standing-outside-with-arm-raised.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt='Young Smiling Woman Standing Outside with Arm Raised'
