@@ -11,7 +11,10 @@ interface ProductItemProps {
 const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
   return (
     <div className='flex h-full w-full flex-col gap-5 overflow-hidden rounded-xl border border-gray p-5'>
-      <div className='group h-[15rem] w-full overflow-hidden rounded-lg'>
+      <Link
+        href={`/products/${productItem.id}`}
+        className='group h-[15rem] w-full overflow-hidden rounded-lg'
+      >
         {/* PRODUCT IMAGE */}
         <Image
           src={productItem.images[0]}
@@ -21,7 +24,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
           priority
           className='eq h-full w-full object-cover group-hover:scale-125'
         />
-      </div>
+      </Link>
 
       {/* PRODUCT SHORT DETAIL */}
       <div className='flex flex-col gap-2.5'>
