@@ -41,3 +41,48 @@ html {
 .link-item:hover::after {
   @apply w-full;
 }
+
+/* GALLERY STYLES */
+.gallery-grid-parent {
+  display: grid;
+  grid-template-areas:
+    'a a b d e e e'
+    'a a b d f g g '
+    'c c c d f h i';
+}
+
+.grid-child-1 {
+  grid-area: a;
+}
+
+.grid-child-2 {
+  grid-area: b;
+}
+
+.grid-child-3 {
+  grid-area: c;
+}
+
+.grid-child-4 {
+  grid-area: d;
+}
+
+.grid-child-5 {
+  grid-area: e;
+}
+
+.grid-child-6 {
+  grid-area: f;
+}
+
+.grid-child-7 {
+  grid-area: g;
+}
+
+.grid-child-8 {
+  grid-area: h;
+}
+
+.grid-child-9 {
+  grid-area: i;
+}
