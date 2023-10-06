@@ -7,9 +7,9 @@ import SectionTitle from '../shared/SectionTitle';
 import HorizontalTab from '../ui/HorizontalTab';
 import PackageItem from './PackageItem';
 import Link from 'next/link';
-import useFetch from '@/hooks/useFetch';
-import Loading from '../shared/Loading';
-import Error from '../shared/Error';
+import useFetch from '@/hooks/use-fetch';
+import Loading from '../shared/loading';
+import Error from '../shared/error';
 
 interface PackagesProps {
   fromPackagePage?: boolean;
@@ -29,10 +29,8 @@ const Packages: React.FC<PackagesProps> = ({ fromPackagePage }) => {
     >
       <SectionTitle title='Explore our beauty packages' subTitle='Packages' />
 
-      {/* When loading is true */}
       {isLoading && <Loading isLoading={isLoading} />}
 
-      {/* If an error occurred */}
       {error && <Error error={error.message} />}
 
       {/* PACKAGES */}

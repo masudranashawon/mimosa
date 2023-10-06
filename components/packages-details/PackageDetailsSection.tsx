@@ -1,7 +1,7 @@
-import { packageItem } from '@/types/beautyPackage';
+import { beautyPackageType } from '@/types/beautyPackage';
 
 interface PackageDetailsSectionProps {
-  packageItem: packageItem;
+  packageItem: beautyPackageType;
 }
 
 const PackageDetailsSection: React.FC<PackageDetailsSectionProps> = ({
@@ -9,7 +9,7 @@ const PackageDetailsSection: React.FC<PackageDetailsSectionProps> = ({
 }) => {
   return (
     <section className='wrapper section-padding'>
-      <h2 className='text-4xl'>{packageItem?.title}</h2>
+      <h2 className='text-4xl'>{packageItem.title}</h2>
     </section>
   );
 };

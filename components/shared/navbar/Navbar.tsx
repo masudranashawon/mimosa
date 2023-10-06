@@ -14,8 +14,8 @@ const Navbar = async () => {
               </Link>
             </li>
             <li>
-              <Link href='/#products' className='link-item'>
-                Products
+              <Link href='/' className='link-item'>
+                link 2
               </Link>
             </li>
             <li>

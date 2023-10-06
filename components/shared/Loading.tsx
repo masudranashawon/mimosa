@@ -11,8 +11,8 @@ const Loading: React.FC<LoadingProps> = ({ isLoading }) => {
         color='#32B8CB'
         loading={isLoading}
         size={16}
-        aria-label='Loading Spinner'
         data-testid='loader'
+        aria-label='Loading Spinner'
       />
     </div>
   );

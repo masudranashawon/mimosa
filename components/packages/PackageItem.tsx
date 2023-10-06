@@ -1,3 +1,5 @@
+'use client';
+
 import { beautyPackageType } from '@/types/beautyPackage';
 import { buttonVariance } from '../ui/Button';
 import { formatCurrency } from '@/utils/formatCurrency';
@@ -31,7 +33,7 @@ const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
         <span className='text-xs font-bold uppercase tracking-[0.375em] text-green'>
           {packageItem.category}
         </span>
-        <h4 className='text-xl 2xl:text-2xl'>{packageItem.title}</h4>
+        <h4 className='truncate text-xl 2xl:text-2xl'>{packageItem.title}</h4>
         <hr />
         <p className='text-dark/75'>{packageItem.description}</p>
         <div className='flex items-center justify-between gap-2.5'>
