@@ -1,6 +1,6 @@
 import { data } from '@/data/gallery';
 import { cn } from '@/lib/utils';
-import { galleryItem } from '@/types/galleryItem';
+import { galleryItemType } from '@/types/galleryItem';
 import SectionTitle from '../shared/SectionTitle';
 import Image from 'next/image';
 
@@ -15,7 +15,7 @@ const Gallery = () => {
         />
 
         <div className='gallery-grid-parent h-screen w-full gap-10'>
-          {data.map((item: galleryItem) => (
+          {data.map((item: galleryItemType) => (
             <div
               key={item.id}
               className={cn(

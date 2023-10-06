@@ -8,9 +8,9 @@ html {
   scroll-behavior: smooth !important;
 }
 
-/* main {
+main {
   @apply mt-16;
-} */
+}
 
 /* COMMON STYLES */
 .wrapper {

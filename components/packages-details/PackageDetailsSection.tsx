@@ -1,4 +1,4 @@
-import { packageItem } from '@/types/packageItem';
+import { packageItem } from '@/types/beautyPackage';
 
 interface PackageDetailsSectionProps {
   packageItem: packageItem;

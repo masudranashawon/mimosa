@@ -1,11 +1,11 @@
-import { packageItem } from '@/types/packageItem';
+import { beautyPackageType } from '@/types/beautyPackage';
 import { buttonVariance } from '../ui/Button';
 import { formatCurrency } from '@/utils/formatCurrency';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface PackageItemProps {
-  packageItem: packageItem;
+  packageItem: beautyPackageType;
 }
 
 const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
@@ -13,11 +13,11 @@ const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
     <div className='flex w-full flex-col gap-5'>
       {/* PACKAGE CARD IMAGE */}
       <Link
-        href={`/packages/${packageItem.id}`}
+        href={`/packages/${packageItem._id}`}
         className='border-grey group h-[12rem] w-full overflow-hidden rounded-xl border 2xl:h-[15rem]'
       >
         <Image
-          src={packageItem.image}
+          src={packageItem.images[0]}
           alt={packageItem.title}
           height={360}
           width={640}
@@ -39,7 +39,7 @@ const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
             {formatCurrency(packageItem.price)}
           </p>
           <Link
-            href={`/packages/${packageItem.id}`}
+            href={`/packages/${packageItem._id}`}
             className={buttonVariance({ variant: 'royalty' })}
           >
             View Details

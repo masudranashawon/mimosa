@@ -1,17 +1,27 @@
-import { data } from '@/data/packages';
+'use client';
+
 import { cn } from '@/lib/utils';
 import { buttonVariance } from '../ui/Button';
-import { packageItem } from '@/types/packageItem';
+import { beautyPackageType } from '@/types/beautyPackage';
 import SectionTitle from '../shared/SectionTitle';
 import HorizontalTab from '../ui/HorizontalTab';
 import PackageItem from './PackageItem';
 import Link from 'next/link';
+import useFetch from '@/hooks/useFetch';
+import Loading from '../shared/Loading';
+import Error from '../shared/Error';
 
 interface PackagesProps {
   fromPackagePage?: boolean;
 }
 
 const Packages: React.FC<PackagesProps> = ({ fromPackagePage }) => {
+  const {
+    data: beautyPackages,
+    error,
+    isLoading,
+  } = useFetch('/api/beauty_packages');
+
   return (
     <section
       className='wrapper section-padding'
@@ -19,70 +29,100 @@ const Packages: React.FC<PackagesProps> = ({ fromPackagePage }) => {
     >
       <SectionTitle title='Explore our beauty packages' subTitle='Packages' />
 
+      {/* When loading is true */}
+      {isLoading && <Loading isLoading={isLoading} />}
+
+      {/* If an error occurred */}
+      {error && <Error error={error.message} />}
+
       {/* PACKAGES */}
-      <HorizontalTab tabs={['Wellness', 'Beauty', 'Events']}>
-        {/* Wellness */}
-        <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-          {!fromPackagePage &&
-            data
-              .filter((item: packageItem) => item.masterCategory === 'Wellness')
-              .sort((a: packageItem, b: packageItem) => a.price - b.price)
-              .slice(0, 4)
-              .map((item: packageItem) => (
-                <PackageItem key={item.id} packageItem={item} />
-              ))}
+      {beautyPackages && beautyPackages.length > 0 && (
+        <HorizontalTab tabs={['Wellness', 'Beauty', 'Events']}>
+          {/* Wellness */}
+          <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            {!fromPackagePage &&
+              beautyPackages
+                .filter(
+                  (item: beautyPackageType) => item.category === 'Wellness'
+                )
+                .sort(
+                  (a: beautyPackageType, b: beautyPackageType) =>
+                    a.price - b.price
+                )
+                .slice(0, 4)
+                .map((item: beautyPackageType) => (
+                  <PackageItem key={item._id} packageItem={item} />
+                ))}
 
-          {fromPackagePage &&
-            data
-              .filter((item: packageItem) => item.masterCategory === 'Wellness')
-              .sort((a: packageItem, b: packageItem) => a.price - b.price)
-              .map((item: packageItem) => (
-                <PackageItem key={item.id} packageItem={item} />
-              ))}
-        </div>
+            {fromPackagePage &&
+              beautyPackages
+                .filter(
+                  (item: beautyPackageType) => item.category === 'Wellness'
+                )
+                .sort(
+                  (a: beautyPackageType, b: beautyPackageType) =>
+                    a.price - b.price
+                )
+                .map((item: beautyPackageType) => (
+                  <PackageItem key={item._id} packageItem={item} />
+                ))}
+          </div>
 
-        {/* Beauty */}
-        <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-          {!fromPackagePage &&
-            data
-              .filter((item: packageItem) => item.masterCategory === 'Beauty')
-              .sort((a: packageItem, b: packageItem) => a.price - b.price)
-              .slice(0, 4)
-              .map((item: packageItem) => (
-                <PackageItem key={item.id} packageItem={item} />
-              ))}
+          {/* Beauty */}
+          <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            {!fromPackagePage &&
+              beautyPackages
+                .filter((item: beautyPackageType) => item.category === 'Beauty')
+                .sort(
+                  (a: beautyPackageType, b: beautyPackageType) =>
+                    a.price - b.price
+                )
+                .slice(0, 4)
+                .map((item: beautyPackageType) => (
+                  <PackageItem key={item._id} packageItem={item} />
+                ))}
 
-          {fromPackagePage &&
-            data
-              .filter((item: packageItem) => item.masterCategory === 'Beauty')
-              .sort((a: packageItem, b: packageItem) => a.price - b.price)
-              .map((item: packageItem) => (
-                <PackageItem key={item.id} packageItem={item} />
-              ))}
-        </div>
+            {fromPackagePage &&
+              beautyPackages
+                .filter((item: beautyPackageType) => item.category === 'Beauty')
+                .sort(
+                  (a: beautyPackageType, b: beautyPackageType) =>
+                    a.price - b.price
+                )
+                .map((item: beautyPackageType) => (
+                  <PackageItem key={item._id} packageItem={item} />
+                ))}
+          </div>
 
-        {/* Events */}
-        <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-          {!fromPackagePage &&
-            data
-              .filter((item: packageItem) => item.masterCategory === 'Events')
-              .sort((a: packageItem, b: packageItem) => a.price - b.price)
-              .slice(0, 4)
-              .map((item: packageItem) => (
-                <PackageItem key={item.id} packageItem={item} />
-              ))}
+          {/* Events */}
+          <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            {!fromPackagePage &&
+              beautyPackages
+                .filter((item: beautyPackageType) => item.category === 'Events')
+                .sort(
+                  (a: beautyPackageType, b: beautyPackageType) =>
+                    a.price - b.price
+                )
+                .slice(0, 4)
+                .map((item: beautyPackageType) => (
+                  <PackageItem key={item._id} packageItem={item} />
+                ))}
 
-          {fromPackagePage &&
-            data
-              .filter((item: packageItem) => item.masterCategory === 'Events')
-              .sort((a: packageItem, b: packageItem) => a.price - b.price)
-              .map((item: packageItem) => (
-                <PackageItem key={item.id} packageItem={item} />
-              ))}
-        </div>
-      </HorizontalTab>
+            {fromPackagePage &&
+              beautyPackages
+                .filter((item: beautyPackageType) => item.category === 'Events')
+                .sort(
+                  (a: beautyPackageType, b: beautyPackageType) =>
+                    a.price - b.price
+                )
+                .map((item: beautyPackageType) => (
+                  <PackageItem key={item._id} packageItem={item} />
+                ))}
+          </div>
+        </HorizontalTab>
+      )}
 
-      {!fromPackagePage && (
+      {!fromPackagePage && beautyPackages && beautyPackages.length > 0 && (
         <div className='mt-10 flex justify-center 2xl:mt-20'>
           <Link
             href='/packages'
