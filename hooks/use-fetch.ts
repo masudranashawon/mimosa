@@ -17,7 +17,7 @@ const fetcher = async (url: string, token: string = '') => {
 const useFetch = (endpoint: string, token: string = '') => {
   const { data, error } = useSWR(
     `${process.env.NEXT_PUBLIC_BASE_URL}${endpoint}`,
-    (uri) => fetcher(uri, token)
+    (url) => fetcher(url, token)
   );
 
   const isLoading = !data && !error;

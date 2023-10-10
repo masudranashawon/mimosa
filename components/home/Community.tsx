@@ -44,12 +44,12 @@ const Community = () => {
           </div>
 
           {/* UPPER RIGHT TEXT */}
-          <h2 className='absolute -top-[15%] left-[40%] z-[2] whitespace-nowrap text-7xl font-bold uppercase 2xl:-top-[10%] 2xl:text-9xl'>
+          <h2 className='heading-3 2xl:heading-2 absolute -top-[15%] left-[40%] z-[2] whitespace-nowrap font-bold uppercase 2xl:-top-[10%]'>
             Join Mimosa
           </h2>
 
           {/* BOTTOM RIGHT TEXT */}
-          <h2 className='absolute -bottom-[15%] right-[40%] z-[2] text-7xl font-bold uppercase 2xl:-bottom-[10%] 2xl:text-9xl'>
+          <h2 className='2xl:heading-2 heading-3 absolute -bottom-[15%] right-[40%] z-[2] font-bold uppercase 2xl:-bottom-[10%]'>
             Community
           </h2>
         </div>
@@ -57,7 +57,7 @@ const Community = () => {
         {/* JOIN BUTTON */}
         <Link
           href='/sign-in'
-          className='eq group absolute bottom-[15%] right-[10%] z-[1] flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-dark/80 text-xs uppercase text-light shadow-2xl shadow-dark/50 backdrop-blur-lg hover:shadow-red/50 2xl:h-40 2xl:w-40 2xl:text-lg'
+          className='eq group absolute bottom-[20%] right-[20%] z-[1] flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-dark/80 text-sm uppercase text-light shadow-2xl shadow-dark/50 backdrop-blur-lg hover:shadow-red/50 2xl:bottom-[15%] 2xl:right-[10%] 2xl:h-40 2xl:w-40 2xl:text-lg'
         >
           <p className='z-[3]'>Join Now</p>
 

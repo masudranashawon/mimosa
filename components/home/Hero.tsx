@@ -20,8 +20,8 @@ const Hero = () => {
               className='h-full w-full object-cover'
             />
           </div>
-          <div className='flex h-full w-full items-center'>
-            <h2 className='text-7xl font-bold uppercase 2xl:text-9xl'>
+          <div className='flex h-full w-full items-center justify-center'>
+            <h2 className='heading-2 2xl:heading-1 text-center font-bold uppercase'>
               Emerge your
             </h2>
           </div>
@@ -33,7 +33,7 @@ const Hero = () => {
             <h2
               className={cn(
                 playfairDisplay.className,
-                'text-7xl lowercase 2xl:text-9xl'
+                'heading-2 2xl:heading-1 lowercase'
               )}
             >
               Inner
@@ -49,7 +49,7 @@ const Hero = () => {
             />
           </div>
           <div className='flex h-full w-full items-center'>
-            <h2 className='text-7xl font-bold uppercase 2xl:text-9xl'>
+            <h2 className='heading-2 2xl:heading-1 font-bold uppercase'>
               glamour<span className='text-green'>.</span>
             </h2>
           </div>
@@ -58,7 +58,7 @@ const Hero = () => {
         {/* THIRD ROW */}
         <div className='grid h-full w-full grid-cols-[40%_auto] gap-10 border-b border-b-gray pb-5 2xl:gap-20'>
           <div className='flex h-full w-full items-center'>
-            <h2 className='text-7xl font-bold uppercase 2xl:text-9xl'>
+            <h2 className='heading-2 2xl:heading-1 font-bold uppercase'>
               unveiling
             </h2>
           </div>
@@ -84,8 +84,8 @@ const Hero = () => {
               className='h-full w-full object-cover'
             />
           </div>
-          <div className='flex h-full w-full items-center'>
-            <h2 className='text-7xl font-bold uppercase 2xl:text-9xl'>
+          <div className='flex h-full w-full items-center justify-center'>
+            <h2 className='heading-2 2xl:heading-1 font-bold uppercase'>
               <span
                 className={cn(
                   playfairDisplay.className,
@@ -111,7 +111,7 @@ const Hero = () => {
         {/* PACKAGES BUTTON */}
         <Link
           href='/#packages'
-          className='eq group absolute bottom-[12%] left-[35%] z-[1] flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-dark text-xs uppercase text-light shadow-2xl shadow-dark/50 hover:shadow-violet/50 2xl:-bottom-[5%] 2xl:left-[33%] 2xl:h-40 2xl:w-40 2xl:text-lg'
+          className='eq group absolute bottom-[10%] left-[38%] z-[1] flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-dark text-xs uppercase text-light shadow-2xl shadow-dark/50 hover:shadow-violet/50 2xl:-bottom-[5%] 2xl:left-[33%] 2xl:h-40 2xl:w-40 2xl:text-lg'
         >
           <p className='z-[3]'>Packages</p>
 

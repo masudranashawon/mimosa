@@ -10,8 +10,8 @@ import Error from '@/components/shared/error';
 const PackageDetailsPage = ({ params }: { params: { id: string } }) => {
   const {
     data: packageItem,
-    error,
     isLoading,
+    error,
   } = useFetch(`/api/beauty_packages/${params.id}`);
 
   return (
